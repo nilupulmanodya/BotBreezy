@@ -55,9 +55,10 @@ def chatbot():
 					if top_classes['validated_top_class']==True:
 						#calling function
 						print('top class found.. top class is>>: ',top_classes['top_class'])
-						res_func=call_func(top_classes['top_class'],body['utterance'])
+						res_func=call_func(top_classes['top_class'],body['utterance'],None)
 						#print(res_func)
 						#check weather function is completed or not
+						print('resssss is******',res_func)
 						if res_func['fun_res']['is_completed']==True:
 							print('function successfully completed')
 							grs()
@@ -72,7 +73,7 @@ def chatbot():
 				else:
 					#calling exists func with input utterance
 					print('calling exisiting funcs')
-					res_func=call_func(session['ses_validate']['func'],body['utterance'])
+					res_func=call_func(session['ses_validate']['func'],body['utterance'],session['ses_validate']['entities'])
 						
 					#check weather function is completed or not
 					if res_func['fun_res']['is_completed']==True:
@@ -98,7 +99,7 @@ def chatbot():
 
 	
 #generated response / default session
-def grs(uncertainty=None,func=None,entities=None,understand=3,func_available=False):
+def grs(uncertainty=None,func=None,entities=None,understand=4,func_available=False):
 	session['ses_validate']={
 		'uncertainty':uncertainty,
 		'func':func,
@@ -111,13 +112,13 @@ def grs(uncertainty=None,func=None,entities=None,understand=3,func_available=Fal
 
 
 #calling functions through dispatcher
-def call_func(func,utterance):	
+def call_func(func,utterance,entities):	
 	try:
 		#print(func)
 		#print(db_connection.mydb)
-		grs(uncertainty=None,func=func,entities=None,understand=session['ses_validate']['understand'],func_available=True)#updating session for funcion
+		grs(uncertainty=None,func=func,entities=entities,understand=session['ses_validate']['understand'],func_available=True)#updating session for funcion
 		fun_res = dispatcher.dispatcher[func](utterance,db_connection.mycursor)
-		#print(session['ses_validate'])
+		print(session['ses_validate'])
 		return fun_res
 	except:
 		return "Invalid function"

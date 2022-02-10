@@ -5,7 +5,7 @@ def career_info(utterance,mycursor):
 	
 	#updating session 
 	#function consists one entity COU
-	print('begining course info',session['ses_validate'])
+	print('begining career info',session['ses_validate'])
 	session['ses_validate']['entities']={
 		'COU':None,
 		}	

@@ -21,7 +21,7 @@ def event_info(utterance,mycursor):
 	if len(entities)>0:
 		for i in range(0, len(entities)):
 
-			#entities needs to course_info (robotic day, invention day)
+			#entities needs to event_info (robotic day, invention day)
 			if entities[i]['ent_data'][2]=='EVT':
 				ent_EVT = entities[i]['ent_data'][0]
 				ent_EVT_ls.append(entities[i])
@@ -80,7 +80,7 @@ def event_info(utterance,mycursor):
 			return response
 			
 			
-	if (ent_FAC==''):
+	if (ent_EVT==''):
 		#no entity found
 		#return to choose intent
 		response = {'fun_res':{
