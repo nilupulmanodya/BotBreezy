@@ -46,6 +46,7 @@ def chatbot():
 		
 		if request.method == 'POST':
 			body=request.json
+			print(body)
 			if body['utterance']:		
 				print(body['utterance'])
 				
@@ -125,7 +126,11 @@ def call_func(func,utterance,entities):
 
 
 if __name__ =="__main__":
-	app.secret_key = 'any random string'
-	app.run(debug=True)
+	app.secret_key = 'super secret key'
+	app.config['SESSION_TYPE'] = 'filesystem'
+
+	
+	app.debug = True
+	app.run()
 	
 

@@ -1,13 +1,31 @@
-import logo from './logo.svg';
+//import dependencies
+import React from 'react';
 import './App.css';
-import CustomChatbot from "./components/chatbot/CustomChatbot";
 
-function App() {
+
+
+//import redux components
+import { Provider } from "react-redux";
+import store from "./store";
+
+//import chat components
+import Chat from "./components/chat/Chat"
+
+//connect redux to application
+
+const App = () => {
+
+	
   return (
-  
-		<CustomChatbot />
+
+	/*chat components goes here */
+    <Provider store={store}>
+      <div className="container">
       
-    
+        {/* Insert Chat Component HERE! */}
+        <Chat />
+      </div>
+    </Provider>
   );
 }
 
