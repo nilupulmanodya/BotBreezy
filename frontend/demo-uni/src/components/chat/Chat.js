@@ -5,6 +5,7 @@ import { connect } from "react-redux";
 //  Import action
 import { userMessage ,sendMessage} from "../../actions/breezy";
 
+
 const Chat = ({ chat, userMessage, sendMessage}) => {
 	//Handle users message
 	const [message, setMessage]=useState("");

@@ -1,7 +1,9 @@
 from flask import session
+from .send_emails import send_emails
 from ..entity_extractor import Entity_extractor
 
-def reg_event(utterance,mycursor):
+
+def reg_event(utterance,mycursor,db_connection):
 	
 	#updating session 
 	#function consists one entity EVT
@@ -89,37 +91,133 @@ def reg_event(utterance,mycursor):
         #checking the registered evt
         if session['ses_validate']['entities']['EVT']=='ine':
         #function success
-        
-            #db query
+            try:
+                #getting student email adress from db
+              #print("registraion number is :",session['ses_validate']['entities']['PSL'])
+              reg=session['ses_validate']['entities']['PSL']
+              sql_q_email ="""select email from students where reg_no= %s """
+              mycursor.execute(sql_q_email,(str(reg),)) 
+              myresult = mycursor.fetchall()
+              std_email=myresult[0][0]
+              #print(std_email)
 
-            #API calling
+                #API calling to send email
+              send_email=send_emails(std_email,'Invention Exhibition',session['ses_validate']['entities']['PSL'])
 
-            #generating and return response with successs status
-            response = {'fun_res':{
+              if send_email==1:
+                  #print("1")
+                    #db query-sent email 1
+                  sql_q_insert_db ="""insert into event_registrations values('Invention Exhibition',%s,1)"""
+                  mycursor.execute(sql_q_insert_db,(str(reg),))
+                  db_connection.commit()
+                  
+                    #response registered sucess email send success
+                    
+                  #generating and return response with successs status
+                  response = {'fun_res':{
+                        		'is_completed':True,
+                        		'content':'Okay.. Successfully registered '+session['ses_validate']['entities']['PSL']+' to Invention Exhibition. Please check confirmation email sent by Demo University for more details.',
+                        		'is_option':False,
+                        		'is_entity':False,
+                        		'options':None,
+                        		'entities':['EVT','PSL']}}
+                  return response
+              else :
+                    #db query sent email 0
+                  #print("0")
+                    #response registered success email sent fail
+                  sql_q_insert_db ="""insert into event_registrations values('Invention Exhibition',%s,0)"""
+                  mycursor.execute(sql_q_insert_db,(str(reg),))
+                  db_connection.commit()
+                    #generating and return response with successs status
+                  response = {'fun_res':{
                         'is_completed':True,
-                        'content':'Okay.. Successfully registered '+session['ses_validate']['entities']['PSL']+' to Invention Exhibition',
+                        'content':'Okay.. Successfully registered '+session['ses_validate']['entities']['PSL']+' to Invention Exhibition. But We cannot send confirmation email to your email address because of some internal or external issues. Please contact administrator for more details through (+94) 123456',
                         'is_option':False,
                         'is_entity':False,
                         'options':None,
                         'entities':['EVT','PSL']}}
-            return response
+                  return response
+            except:
+                #generate response for not success registered
+                
+                #print("1")
+                response = {'fun_res':{
+							'is_completed':True,
+							'content':'Sorry.. I can not register you.. please contact adminstrator for more information through (+94) 123456',
+							'is_option':False,
+							'is_entity':False,
+							'options':None,
+							'entities':['EVT','PSL']}}
+                return response
         
         elif session['ses_validate']['entities']['EVT']=='rbd':
             #function success
-        
-            #db query
+            try:
+                #getting student email adress from db
+              #print("registraion number is :",session['ses_validate']['entities']['PSL'])
+              reg=session['ses_validate']['entities']['PSL']
+              sql_q_email ="""select email from students where reg_no= %s """
+              mycursor.execute(sql_q_email,(str(reg),)) 
+              myresult = mycursor.fetchall()
+              std_email=myresult[0][0]
+              #print(std_email)
 
-            #API calling
+                #API calling to send email
+              send_email=send_emails(std_email,'Robotics Day',session['ses_validate']['entities']['PSL'])
 
-            #generating and return response with successs status
-            response = {'fun_res':{
+              if send_email==1:
+                  #print("1")
+                    #db query-sent email 1
+                  sql_q_insert_db ="""insert into event_registrations values('Robotics Day',%s,1)"""
+                  mycursor.execute(sql_q_insert_db,(str(reg),))
+                  db_connection.commit()
+                  
+                    #response registered sucess email send success
+                    
+                  #generating and return response with successs status
+                  response = {'fun_res':{
+                        		'is_completed':True,
+                        		'content':'Okay.. Successfully registered '+session['ses_validate']['entities']['PSL']+' to Robotics Day. Please check confirmation email sent by Demo University for more details.',
+                        		'is_option':False,
+                        		'is_entity':False,
+                        		'options':None,
+                        		'entities':['EVT','PSL']}}
+                  return response
+              else :
+                    #db query sent email 0
+                  #print("0")
+                    #response registered success email sent fail
+                  sql_q_insert_db ="""insert into event_registrations values('Robotics Day',%s,0)"""
+                  mycursor.execute(sql_q_insert_db,(str(reg),))
+                  db_connection.commit()
+                    #generating and return response with successs status
+                  response = {'fun_res':{
                         'is_completed':True,
-                        'content':'Okay.. Successfully registered '+session['ses_validate']['entities']['PSL']+' to Robotics Day',
+                        'content':'Okay.. Successfully registered '+session['ses_validate']['entities']['PSL']+' to Robotics Day. But We cannot send confirmation email to your email address because of some internal or external issues. Please contact administrator for more details through (+94) 123456',
                         'is_option':False,
                         'is_entity':False,
                         'options':None,
                         'entities':['EVT','PSL']}}
-            return response
+                  return response
+            except:
+                #generate response for not success registered
+                
+                #print("1")
+                response = {'fun_res':{
+							'is_completed':True,
+							'content':'Sorry.. I can not register you.. please contact adminstrator for more information through (+94) 123456',
+							'is_option':False,
+							'is_entity':False,
+							'options':None,
+							'entities':['EVT','PSL']}}
+                return response
+            
+            
+            
+            
+            
+            
         else:
             print('Error occured event_reg')
     if (ent_EVT==''):

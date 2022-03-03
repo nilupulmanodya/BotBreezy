@@ -5,7 +5,7 @@ def Intent_clasification(utterance='How to go to university'):
         'text':utterance,
         'values':{
             'value_1':{
-                'class':'course_info',
+                'class':'reg_event',
                 'value':0.7890
             },
             'value_2':{

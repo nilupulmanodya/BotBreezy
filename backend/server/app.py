@@ -46,7 +46,8 @@ def chatbot():
 		
 		if request.method == 'POST':
 			body=request.json
-			print(body)
+			print(request)
+			print('body is:',body)
 			if body['utterance']:		
 				print(body['utterance'])
 				
@@ -91,12 +92,7 @@ def chatbot():
 		else:	
 			print("no input data found")
 		#need to develop return	
-		return {"members":{
-		"member_id":1,
-		"name":"membername1",
-		"age":"memberage1"}
-		
-	}
+		return "no input data found"
 
 	
 #generated response / default session
@@ -115,10 +111,10 @@ def grs(uncertainty=None,func=None,entities=None,understand=4,func_available=Fal
 #calling functions through dispatcher
 def call_func(func,utterance,entities):	
 	try:
-		#print(func)
+		print("func iss",func)
 		#print(db_connection.mydb)
 		grs(uncertainty=None,func=func,entities=entities,understand=session['ses_validate']['understand'],func_available=True)#updating session for funcion
-		fun_res = dispatcher.dispatcher[func](utterance,db_connection.mycursor)
+		fun_res = dispatcher.dispatcher[func](utterance,db_connection.mycursor,db_connection.mydb)
 		print(session['ses_validate'])
 		return fun_res
 	except:
