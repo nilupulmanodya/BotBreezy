@@ -1,7 +1,7 @@
 from flask import session
 from ..entity_extractor import Entity_extractor
 
-def entry_info(utterance,mycursor):
+def entry_info(utterance,mycursor,db_connection):
 	
 	#updating session 
 	#function consists one entity COU

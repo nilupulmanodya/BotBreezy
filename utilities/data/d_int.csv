@@ -1,0 +1,239 @@
+questions,intents
+How about university,uni_info
+How about university life,uni_info
+How about university environment,uni_info
+Tell me about university life,uni_info
+How you started,uni_info
+What about history,uni_info
+tell me about your university,uni_info
+tell me about your university,uni_info
+Tell me something about university,uni_info
+Tell me about university,uni_info
+can you please tell me about university,uni_info
+can you please let me know about university,uni_info
+let me know about university,uni_info
+tell me about university,uni_info
+What about university history,uni_info
+Tell me about university,uni_info
+Tell me about Computer Science,course_info
+What about Computer Science,course_info
+Tell me course details,course_info
+What about courses,course_info
+tell me about courses,course_info
+which is the best course for me,course_info
+tell me about courses offering from your university,course_info
+tell me about course bio medical engineering,course_info
+tell me more about course computer science,course_info
+what do you know about computer science,course_info
+which course will you offer,course_info
+tell me more about course bio medical engineering,course_info
+how about bio medical engineering course,course_info
+how about bio medical engineering course,course_info
+tell me more about courses,course_info
+tell me bit about courses,course_info
+suggest me a course,course_info
+do you know about courses,course_info
+can you please tell me about courses,course_info
+can you please explain offering courses,course_info
+can you please let me know course details,course_info
+can you please let me know offering courses,course_info
+can you please explain about computer sciences,course_info
+can you please let me know about course enginneering,course_info
+Tell me about faculty,faculty_info
+How about faculty,faculty_info
+How about faculty life,faculty_info
+How about faculty environment,faculty_info
+Tell me about faculty life,faculty_info
+How faculty you started,faculty_info
+What about history,faculty_info
+tell me about your faculties,faculty_info
+tell me about your faculty,faculty_info
+Tell me something about faculty,faculty_info
+Tell me about faculty,faculty_info
+can you please tell me about faculty,faculty_info
+can you please let me know about faculty,faculty_info
+let me know about faculty,faculty_info
+tell me about faculty,faculty_info
+What about faculty history,faculty_info
+tell me about faculty of engineering,faculty_info
+tell me more about faculty of engineering,faculty_info
+can you please explain about faculty of engineering,faculty_info
+please tell me about faculty of engineering,faculty_info
+can you please let me know about faculty of engineering,faculty_info
+what about faculty of engineering,faculty_info
+tell me about faculty of engineering,faculty_info
+tell me about faculty of engineering,faculty_info
+tell me more about faculty of computing,faculty_info
+can you please explain about faculty of computing,faculty_info
+please tell me about faculty of computing,faculty_info
+can you please let me know about faculty of computing,faculty_info
+what about faculty of computing,faculty_info
+tell me about faculty of computing,faculty_info
+Tell me more about staff,staff_info
+what about staff,staff_info
+tell me staff details,staff_info
+who are teaching,staff_info
+who were teaching,staff_info
+lecturers details,staff_info
+can you please tell me lecturers details,staff_info
+how about lecturers profiles,staff_info
+who are the lectures,staff_info
+can you please let me know lecturers,staff_info
+tell me more about lectures,staff_info
+can you tell me lecturers profiles,staff_info
+please tell me about lectures,staff_info
+lecturers profiles,staff_info
+are there lectures,staff_info
+who teaches us,staff_info
+who will teaching us,staff_info
+Tell me about hostel facilities,hostel_info
+How about hostel facilities,hostel_info
+hostel facilities,hostel_info
+How about university hostel facilities,hostel_info
+Tell me about hostel facilities,hostel_info
+tell me about hostel flife,hostel_info
+What about hostel facilities,hostel_info
+tell me about your hostel facilities,hostel_info
+tell me about your hostel facilities,hostel_info
+Tell me something about hostel facilities,hostel_info
+Tell me about hostel facilities,hostel_info
+can you please tell me about hostel facilities,hostel_info
+can you please let me know about hostel facilities,hostel_info
+let me know about university hostel facilities,hostel_info
+tell me about university hostel facilities,hostel_info
+What about university hostel facilities,hostel_info
+Tell me about university hostel facilities,hostel_info
+How about university hostel facilities,hostel_info
+university hostel facilities,hostel_info
+How about university hostel facilities,hostel_info
+Tell me about university hostel facilities,hostel_info
+tell me about university hostel flife,hostel_info
+What about university hostel facilities,hostel_info
+tell me about your hostel facilities,hostel_info
+tell me about your hostel facilities,hostel_info
+does university offer hostel facilities,hostel_info
+How to go to auditorium,places_info
+How to go to Lec1,places_info
+How to go to ground,places_info
+How to go to Lec2,places_info
+Show me road to auditorium,places_info
+Show me road to lec1,places_info
+Show me road to ground,places_info
+Show me road to lec2,places_info
+how can i go to the auditorium,places_info
+how can i go to the lec1,places_info
+how can i go to the ground,places_info
+how can i go to the lec2,places_info
+navigate me to auditorium,places_info
+navigate me to lec1,places_info
+navigate me to ground,places_info
+navigate me to lec2,places_info
+tell me how to go to auditorium,places_info
+tell me how to go to lec1,places_info
+tell me how to go to ground,places_info
+tell me how to go to lec2,places_info
+what are the career propect for bio medical engineering,career_info
+what are the career propect for computer science,career_info
+how about our future if I graduate with bio medical engineering,career_info
+how about our future if I graduate with computer science,career_info
+explain career prospects for bio medical engineering,career_info
+explain career prospects for computer science,career_info
+what are the job oppertunities for bio medical engineering,career_info
+what are the job oppertunities for computer science,career_info
+which kind of jobs can i applied after done bio medical engineering,career_info
+which kind of jobs can i applied after done computer science,career_info
+tell me career propspects,career_info
+can you tell me career prospects,career_info
+what are the career prospects,career_info
+can you please let me know what can i do after graduate with bio medical engineering,career_info
+can you please let me know what can i do after graduate with computer science,career_info
+tell me what can i do after done bio medical engineering,career_info
+tell me what can i do after done computer science,career_info
+what are the job oppertunities for bio medical engineering,career_info
+what are the job oppertunities for computer science,career_info
+Tell me about events,event_info
+what are the events,event_info
+events details,event_info
+can you please tell me events details,event_info
+what are the events details,event_info
+tell me events details,event_info
+what are university events,event_info
+tell me please events details,event_info
+tell me about robotics day,event_info
+tell me about invention exhibition,event_info
+what happend in robotics day,event_info
+what happend in invention exhibition,event_info
+what is robotics day,event_info
+what is invention exhibition,event_info
+what they do in robotics day,event_info
+what they do in invention exhibition,event_info
+please tell me details about robotics day,event_info
+please tell me details about invention exhibition,event_info
+how to join cricket team,sport_info
+how to join karathe team,sport_info
+how to join university karathe team,sport_info
+how to join university cricket team,sport_info
+which will held the practice of karathe,sport_info
+which will held the practice of cricket,sport_info
+tell me about cricket team,sport_info
+tell me about karathe team,sport_info
+when is the cricket practice,sport_info
+when is the karathe practice,sport_info
+can you please tell me about sports,sport_info
+how to join university sports,sport_info
+tell me about university sports,sport_info
+tell me sport facilities of university,sport_info
+can i join sports,sport_info
+how to join sport teams,sport_info
+tell me about sports,sport_info
+tell me about karathe,sport_info
+tell me about cricket,sport_info
+what are the entry requirements for bio medical engineering,entry_info
+what are the entry requirements for computer science,entry_info
+tell me entry requirements for bio medical engineering,entry_info
+tell me entry requirements for computer science,entry_info
+requirements for bio medical engineering,entry_info
+requirements for computer science,entry_info
+what need to apply bio medical engineering,entry_info
+what need to apply computer science,entry_info
+how to eligible for bio medical engineering,entry_info
+how to eligible for computer science,entry_info
+what are the entry requirements for bio medical engineering,entry_info
+Register me to robotics day,reg_event
+Register me to invention exhibition,reg_event
+Register for robotics day S111 name is David,reg_event
+Register for invention exhibition S101 name is David,reg_event
+need to register robotics day,reg_event
+need to register invention exhibition,reg_event
+need to register robotics day David S123,reg_event
+need to register invention exhibition David S546,reg_event
+Register to invention exhibition Lakmal S789,reg_event
+Register to robotics day Saranga S556,reg_event
+Register Akmal to robotics day,reg_event
+can I register robotics day,reg_event
+can I register invention exhibition,reg_event
+Register Akmal to invention exhibition,reg_event
+Apply to hostel,fill_hostel_application
+i need to apply hostel,fill_hostel_application
+can i apply hostel facilities,fill_hostel_application
+i need to fill hostel facility application,fill_hostel_application
+I need to appy for hostel facilities,fill_hostel_application
+how can i apply for hostel facilities,fill_hostel_application
+can you please submit my hostel facility application,fill_hostel_application
+tell me how to apply hostel facilites,fill_hostel_application
+give me to fill hostel facilities application,fill_hostel_application
+i need to join university hostels,fill_hostel_application
+i need hostel facilities,fill_hostel_application
+i need to fill hostel facility application,fill_hostel_application
+how can i fill hostel facilities application,fill_hostel_application
+hello,greeting
+hi,greeting
+how how are you,greeting
+what you doing,greeting
+hey,greeting
+hello bot,greeting
+hi how you doing,greeting
+good morning,greeting
+good evening,greeting
+good afternoon,greeting
+help me,greeting

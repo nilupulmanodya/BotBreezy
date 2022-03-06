@@ -1,5 +1,5 @@
 from flask import session
-def uni_info(utterance,mycursor):
+def uni_info(utterance,mycursor,db_connection):
 	try:
 		#db query for uni_info
 		#print('session is :',session['ses_validate'])

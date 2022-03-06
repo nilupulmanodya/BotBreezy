@@ -2,6 +2,25 @@ from flask import Flask, request, session
 from utilities.intent_validation import *
 from utilities import db_connection,dispatcher,entity_extractor
 
+import pickle
+
+
+#load dumped models
+vectorizer_path = './models/vectorizer.pickle'
+vectorizer = pickle.load(
+    open(vectorizer_path, 'rb'))
+
+gb_path = './models/gb.pickle'
+gboost_m = pickle.load(
+    open(gb_path, 'rb'))
+
+transformer_path = './models/transformer.pickle'
+transformer = pickle.load(
+    open(transformer_path, 'rb'))
+
+
+
+
 app=Flask(__name__)
 
 
@@ -53,7 +72,7 @@ def chatbot():
 				
 				#check weather intent already exists or not
 				if not session['ses_validate']['func_available']:
-					top_classes = Validate_top_class(Intent_clasification(body['utterance']))
+					top_classes = Validate_top_class(Intent_clasification(vectorizer, gboost_m, transformer,[body['utterance']]))
 					if top_classes['validated_top_class']==True:
 						#calling function
 						print('top class found.. top class is>>: ',top_classes['top_class'])

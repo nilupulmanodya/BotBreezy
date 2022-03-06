@@ -1,5 +1,5 @@
 from flask import session
-def staff_info(utterance,mycursor):
+def staff_info(utterance,mycursor,db_connection):
 	try:
 		#db query for staff info
 		#print('session is :',session['ses_validate'])

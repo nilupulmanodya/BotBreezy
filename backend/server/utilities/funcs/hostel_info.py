@@ -1,5 +1,5 @@
 from flask import session
-def hostel_info(utterance,mycursor):
+def hostel_info(utterance,mycursor,db_connection):
 	try:
 		#db query for hostel_info
 		#print('session is :',session['ses_validate'])
