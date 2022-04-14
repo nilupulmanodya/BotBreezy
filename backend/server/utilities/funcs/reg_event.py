@@ -107,7 +107,7 @@ def reg_event(utterance,mycursor,db_connection):
               if send_email==1:
                   #print("1")
                     #db query-sent email 1
-                  sql_q_insert_db ="""insert into event_registrations values('Invention Exhibition',%s,1)"""
+                  sql_q_insert_db ="""insert into event_registrations values('Invention Exhibition',%s,1,0)"""
                   mycursor.execute(sql_q_insert_db,(str(reg),))
                   db_connection.commit()
                   
@@ -188,7 +188,7 @@ def reg_event(utterance,mycursor,db_connection):
                     #db query sent email 0
                   #print("0")
                     #response registered success email sent fail
-                  sql_q_insert_db ="""insert into event_registrations values('Robotics Day',%s,0)"""
+                  sql_q_insert_db ="""insert into event_registrations values('Robotics Day',%s,0,1)"""
                   mycursor.execute(sql_q_insert_db,(str(reg),))
                   db_connection.commit()
                     #generating and return response with successs status
@@ -225,7 +225,7 @@ def reg_event(utterance,mycursor,db_connection):
 		#return to choose intent
         response = {'fun_res':{
 					'is_completed':False,
-					'content':'Tell me, which event do you like to register ?',
+					'content':'Currently we have Robotics day and Inovation exhibtion, tell me.. which event do you like to register ?',
 					'is_option':False,
 					'is_entity':True,
 					'options':None,
